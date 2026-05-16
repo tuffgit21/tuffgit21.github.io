@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - TuffGit21 Games</title>
+    <style>
+        html, body {
+            scroll-behavior: smooth;
+        }
+        body{
+            background:#111;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        /* hide checkbox */
+        #menu-toggle {
+            display: none;
+        }
+        .menu-btn{
+            background:#11111100;
+            color: white;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            display: inline-block;
+            text-decoration: none;
+        }
+    .menu{
+        display: none;
+        margin-top: 10px;
+        background: #222;
+        padding: 15px;
+        width:200px;
+        border-radius: 10px;
+    }
+    #menu-toggle:checked + .menu-btn + .menu {
+        display: block;
+    }
+    .menu a{
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 8px 0;
+    }
+ 
+
+/* Login form container responsive styling */
+.login-container {
+    background-color: rgba(0, 0, 0, 0.555);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 450px;
+    min-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .login-container {
+        width: 95%;
+        padding: 20px;
+        margin: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        width: 95%;
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+  
+  
+</style>
+</head>
+<body style="background-color:#3B3B3B">
+    <header id="navbar" class="nav-down">
+    <nav style="background-color: rgba(0, 0, 0, 0.555); padding: 10px; margin: 20px; border-radius: 10px;">
+        <div style="float: left;">
+            <h2 style="color:white; font-family:Georgia, 'Times New Roman', Times, serif"> TuffGit21 Games</h2>
+        </div>
+        <section style="float: right;">
+            <a href="Signup.html" style="color: white; text-decoration: none; font-family:Georgia, 'Times New Roman', Times, serif; position: relative; top: 10px; right:15px">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="27" viewBox="0 0 24 24" fill="white" style="position: relative; top: 5px; right: 5px">
+                    <path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/>
+                </svg> Sign Up
+            </a>
+        </section>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-btn" style="color: white; font-family:Georgia, 'Times New Roman', Times, serif;position: relative; top: 10px; right: 1px;" >&#9776; Menu</label>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="index.html#About">About us</a>
+            <a href="index.html#Projects">Projects</a>
+            <a href="index.html#Contacts">Contact us</a>
+        </div>
+
+    </nav>
+    </header>
+    <p style="color:rgb(255, 255, 255)">Coming soon!</p>
+ 
+    
+     <div class="login-container">
+        <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);font-family:Georgia, 'Times New Roman', Times, serif; enable-background:accumulate;" align="center"> Log In</h1>
+        <p style="color:white">Please enter your credentials to log in.</p>
+        <form method="post" action="login.php">
+        <input class="bg-[#222630] px-4 py-3 outline-none w-[280px] text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]" name="email" placeholder="Enter email" type="email" style="padding: 10px; margin: 10px; border-radius: 5px; border: none; width: 90%; background-color: #222630; color: white; outline: none; border: 2px solid #2B3040; transition: border-color 0.1s ease-in-out; ">
+        <input class="bg-[#222630] px-4 py-3 outline-none w-[280px] text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]" name="username" placeholder="Enter username" type="text" style="padding: 10px; margin: 10px; border-radius: 5px; border: none; width: 90%; background-color: #222630; color: white; outline: none; border: 2px solid #2B3040; transition: border-color 0.1s ease-in-out;">
+        <input class="bg-[#222630] px-4 py-3 outline-none w-[280px] text-white rounded-lg border-2 transition-colors duration-100 border-solid focus:border-[#596A95] border-[#2B3040]" name="password" placeholder="Enter password" type="password" style="padding: 10px; margin: 10px; border-radius: 5px; border: none; width: 90%; background-color: #222630; color: white; outline: none; border: 2px solid #2B3040; transition: border-color 0.1s ease-in-out;">        
+        <button  type="submit" name="Log In" style="padding: 11px 115px; margin: 15px auto; border-radius: 5px; border: none; background-color: #4CAF50; color: white; cursor: pointer; display: block;">Log In</button>
+        <p style="color:rgba(255, 255, 255, 0)" align="center"><a href="Signup.html" style="color: white; text-decoration: underline;">Don't have an account? Sign up here.</a></p>
+        </form>
+    </div>
+    <p style="color:rgba(255, 255, 255, 0)">s</p>
+<footer style="background-color: rgba(0, 0, 0, 0.555); padding: 20px; margin: 20px; border-radius: 10px;">
+    <p style="color:white">© 2026 TuffGit21 Games inc. All rights reserved.</p>
+</footer>
+</body>
+</html>
