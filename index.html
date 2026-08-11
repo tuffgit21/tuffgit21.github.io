@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ledger — Under maintenance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .maint-wrap{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 28px;
+  }
+  .maint-code{
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .maint-code::before{
+    content: '';
+    width: 8px; height: 8px;
+    background: var(--accent);
+    display: inline-block;
+  }
+  .maint-wrap h1{
+    max-width: 620px;
+    font-size: clamp(30px, 5vw, 46px);
+  }
+  .maint-wrap p.sub{
+    margin-top: 20px;
+    max-width: 460px;
+    color: var(--muted);
+    font-size: 16px;
+  }
+  .maint-panel{
+    margin-top: 48px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    padding: 28px 32px;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+  }
+  .maint-panel::before, .maint-panel::after{
+    content:'';
+    position:absolute;
+    width: 10px; height: 10px;
+    border: 1px solid var(--accent-dim);
+  }
+  .maint-panel::before{ top: 10px; left: 10px; border-right:none; border-bottom:none; }
+  .maint-panel::after{ bottom: 10px; right: 10px; border-left:none; border-top:none; }
+  .maint-row{
+    display:flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .maint-row:last-child{ border-bottom: none; }
+  .maint-row span:last-child{ color: var(--text); }
+  .maint-back{
+    margin-top: 40px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent);
+    border-bottom: 1px solid transparent;
+    transition: border-color .15s ease;
+  }
+  .maint-back:hover{ border-color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="maint-wrap">
+  <div class="maint-code">Status: maintenance</div>
+  <h1>Ledger is offline for a moment.</h1>
+  <p class="sub">Doing some upkeep on the site — projects, links, and the log will be back shortly. Nothing's broken, just paused.</p>
+
+  <div class="maint-panel">
+    <div class="maint-row"><span>Started</span><span>Aug 11, 2026 — 09:40</span></div>
+    <div class="maint-row"><span>Expected back</span><span>Within a few hours</span></div>
+    <div class="maint-row"><span>Reason</span><span>Routine update</span></div>
+  </div>
+</div>
+
+</body>
+</html>
