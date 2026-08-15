@@ -3,99 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ledger — Under maintenance</title>
+<title>Ledger — Projects</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<style>
-  .maint-wrap{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 28px;
-  }
-  .maint-code{
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--accent);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 22px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .maint-code::before{
-    content: '';
-    width: 8px; height: 8px;
-    background: var(--accent);
-    display: inline-block;
-  }
-  .maint-wrap h1{
-    max-width: 620px;
-    font-size: clamp(30px, 5vw, 46px);
-  }
-  .maint-wrap p.sub{
-    margin-top: 20px;
-    max-width: 460px;
-    color: var(--muted);
-    font-size: 16px;
-  }
-  .maint-panel{
-    margin-top: 48px;
-    border: 1px solid var(--line);
-    background: var(--surface);
-    padding: 28px 32px;
-    width: 100%;
-    max-width: 420px;
-    position: relative;
-  }
-  .maint-panel::before, .maint-panel::after{
-    content:'';
-    position:absolute;
-    width: 10px; height: 10px;
-    border: 1px solid var(--accent-dim);
-  }
-  .maint-panel::before{ top: 10px; left: 10px; border-right:none; border-bottom:none; }
-  .maint-panel::after{ bottom: 10px; right: 10px; border-left:none; border-top:none; }
-  .maint-row{
-    display:flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--line);
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--muted);
-  }
-  .maint-row:last-child{ border-bottom: none; }
-  .maint-row span:last-child{ color: var(--text); }
-  .maint-back{
-    margin-top: 40px;
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--accent);
-    border-bottom: 1px solid transparent;
-    transition: border-color .15s ease;
-  }
-  .maint-back:hover{ border-color: var(--accent); }
-</style>
 </head>
 <body>
 
-<div class="maint-wrap">
-  <div class="maint-code">Status: maintenance</div>
-  <h1>Ledger is offline for a moment.</h1>
-  <p class="sub">Doing some upkeep on the site — projects, links, and the log will be back shortly. Nothing's broken, just paused.</p>
-
-  <div class="maint-panel">
-    <div class="maint-row"><span>Started</span><span>Aug 11, 2026 — 09:40</span></div>
-    <div class="maint-row"><span>Expected back</span><span>Within a few hours</span></div>
-    <div class="maint-row"><span>Reason</span><span>Routine update</span></div>
+<header>
+  <div class="header-inner">
+    <div class="logo">Ledger<span>.</span></div>
+    <nav>
+      <a href="#work">work</a>
+      <a href="#about">about</a>
+      <a href="#contact">contact</a>
+    </nav>
   </div>
-</div>
+</header>
+
+<section class="hero wrap">
+  <div class="hero-eyebrow">Currently building</div>
+  <h1>A running log of things I've <em>built</em>, broken, and shipped.</h1>
+  <p class="hero-sub">I'm Youssef — i'm a tech guy, i love coding and tech stuff. This is where the projects live: what they are, what they're made of, and where to find them.</p>
+  <div class="hero-stats">
+    <div>
+      <div class="stat-num">04</div>
+      <div class="stat-label">projects</div>
+    </div>
+    <div>
+      <div class="stat-num">02</div>
+      <div class="stat-label">in progress</div>
+    </div>
+    <div>
+      <div class="stat-num">2026</div>
+      <div class="stat-label">building since</div>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="work">
+  <div class="section-head">
+    <div class="section-title">Selected work</div>
+    <div class="section-tag">04 entries — newest first</div>
+  </div>
+
+  <div class="grid">
+
+     <div class="card">
+      <div class="card-meta">
+        <div class="card-status"><span class="dot"></span>Public</div>
+        <span>2026</span>
+      </div>
+      <h3>Calculator app - Released</h3>
+      <p>A lightweight and Open-source Calculator made for systems that doesn't have calculators.</p>
+      <div class="stack"><span>Python</span></div>
+      <div class="card-links">
+        <a href="https://github.com/tuffgit21/Calculator" target="_blank">Source →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">
+        <div class="card-status"><span class="dot"></span>Public</div>
+        <span>2026</span>
+      </div>
+      <h3>PassGen GUI & CLI - Now Available</h3>
+      <p>Generate a <strong>password</strong> using the GUI (Graphical User Interface) or CLI (Command Line Interface) apps</p>
+      <div class="stack"><span>Python</span></div>
+      <div class="card-links">
+        <a href="https://github.com/tuffgit21/PassGen" target="_blank">Source →</a>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-meta">
+        <div class="card-status"><span class="dot archived"></span>Archived</div>
+        <span>2026</span>
+      </div>
+      <h3>EPK-Pre-Release-0.2</h3>
+      <p>Stands for Epic Package Manager, it's a proto-type package manager like apt (for debian-based distros) currently a useless proto-type.</p>
+      <div class="stack"><span>Python</span></div>
+      <div class="card-links">
+        <a href="https://github.com/tuffgit21/tuffgit21.github.io/releases/tag/EPK-Pre-Release-0.2"target="_blank">Source →</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-meta">
+        <div class="card-status"><span class="dot archived"></span>Discontinued</div>
+        <span>2026</span>
+      </div>
+      <h3>The Hangout Chat Game - Roblox</h3>
+      <p>Made for players who can't chat in some regions. can cure boredom with friends or family member!
+      </p>
+      <div class="stack"><span>Lua</span><span>Roblox Studio</span></div>
+      <div class="card-links">
+        <a href="https://www.roblox.com/games/99404489930995/The-Hangout-Chat-Game" target="_blank">View site →</a>
+      
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section wrap" id="about">
+  <div class="section-head">
+    <div class="section-title">About</div>
+    <div class="section-tag">who's building this</div>
+  </div>
+  <div class="about">
+    <div>
+      <p>Hey,I'm Youssef!</p>
+      <p>I'm a tech enthusiast and programmer who enjoys building things, experimenting with Linux, and learning how computers work. I mainly work with Python, C, and web technologies, and I'm always working on new projects.</p>
+    </div>
+    <div class="about-list">
+      <div><span>Based in</span><span>Lebanon</span></div>
+      <div><span>Focus</span><span>Web, ML, etc.</span></div>
+      <div><span>Available for</span><span>Freelance / full-time</span></div>
+      <div><span>Currently</span><span>Building Projects</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap" id="contact">
+  <div class="footer-inner">
+    <div class="contact-title">Have a project in mind? Let's talk.</div>
+    <div class="footer-links">
+      <!--<a href="mailto:you@email.com">Email</a>-->
+      <a href="https://github.com/tuffgit21/" target="_blank">GitHub</a>
+      <a href="https://tiktok.com/@i.love_coding">Tiktok</a>
+      <a href="https://discord.gg/nNTrCmrS6y" target="_blank">Discord</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Ledger. Built by hand.</div>
+</footer>
 
 </body>
 </html>
