@@ -22,7 +22,7 @@
 </header>
 
 <section class="hero wrap">
-  <div class="hero-eyebrow"> Currently building</div>
+  <div class="hero-eyebrow">Currently building</div>
   <h1>A running log of things I've <em>built</em>, broken, and shipped.</h1>
   <p class="hero-sub">I'm Youssef — i'm a tech guy, i love coding and tech stuff. This is where the projects live: what they are, what they're made of, and where to find them.</p>
   <div class="hero-stats">
@@ -58,8 +58,7 @@
       <p>A lightweight and Open-source Calculator made for systems that doesn't have calculators.</p>
       <div class="stack"><span>Python</span></div>
       <div class="card-links">
-        <a href="https://github.com/tuffgit21/Calculator" target="_blank">Source </a>
-        <a href="https://github.com/tuffgit21/Calculator/releases" target="_blank">Download →</a>
+        <a href="https://github.com/tuffgit21/Calculator" target="_blank">Source →</a>
       </div>
     </div>
 
@@ -72,21 +71,20 @@
       <p>Generate a <strong>password</strong> using the GUI (Graphical User Interface) or CLI (Command Line Interface) apps</p>
       <div class="stack"><span>Python</span></div>
       <div class="card-links">
-        <a href="https://github.com/tuffgit21/PassGen" target="_blank">Source </a>
-        <a href="https://github.com/tuffgit21/PassGen/releases" target="_blank">Download →</a>
+        <a href="https://github.com/tuffgit21/PassGen" target="_blank">Source →</a>
       </div>
     </div>
     
     <div class="card">
       <div class="card-meta">
-        <div class="card-status"><span class="dot archived"></span>Discontinued</div>
+        <div class="card-status"><span class="dot archived"></span>Archived</div>
         <span>2026</span>
       </div>
-      <h3>EPK-Pre-Release-0.2 - Not Available</h3>
-      <p>Stands for Epic Package Manager, it was a proto-type package manager inspired by apt (for debian-based distros)</p>
+      <h3>EPK-Pre-Release-0.2</h3>
+      <p>Stands for Epic Package Manager, it's a proto-type package manager like apt (for debian-based distros) currently a useless proto-type.</p>
       <div class="stack"><span>Python</span></div>
       <div class="card-links">
-        <a onclick="alert('This Project is unavailable right now and cannot be downloaded!')">Source →</a>
+        <a href="https://github.com/tuffgit21/tuffgit21.github.io/releases/tag/EPK-Pre-Release-0.2"target="_blank">Source →</a>
       </div>
     </div>
     <div class="card">
@@ -95,7 +93,7 @@
         <span>2026</span>
       </div>
       <h3>The Hangout Chat Game - Roblox</h3>
-      <p>A Roblox social game designed to give players a place to hangout and interact with friends.
+      <p>Made for players who can't chat in some regions. can cure boredom with friends or family member!
       </p>
       <div class="stack"><span>Lua</span><span>Roblox Studio</span></div>
       <div class="card-links">
@@ -119,7 +117,7 @@
     </div>
     <div class="about-list">
       <div><span>Based in</span><span>Lebanon</span></div>
-      <div><span>Focus</span><span>Software, Linux, Web, etc.</span></div>
+      <div><span>Focus</span><span>Web, ML, etc.</span></div>
       <div><span>Available for</span><span>Freelance / full-time</span></div>
       <div><span>Currently</span><span>Building Projects</span></div>
     </div>
@@ -136,8 +134,52 @@
       <a href="https://discord.gg/nNTrCmrS6y" target="_blank">Discord</a>
     </div>
   </div>
+
+  <div class="contact-form-panel">
+    <div data-fs-success class="fs-success"></div>
+    <div data-fs-error class="fs-error"></div>
+
+    <form id="contact-form">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" data-fs-field required />
+        <span data-fs-error="name" class="field-error"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" data-fs-field required />
+        <span data-fs-error="email" class="field-error"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="reason">Reason for contact</label>
+        <select id="reason" name="reason" data-fs-field>
+          <option value="Hiring / freelance">Hiring / freelance</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="Bug report">Bug report</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" data-fs-field required rows="5"></textarea>
+        <span data-fs-error="message" class="field-error"></span>
+      </div>
+
+      <button type="submit" data-fs-submit-btn>Send message</button>
+    </form>
+  </div>
+
   <div class="footer-bottom">© 2026 Ledger. Built by hand.</div>
 </footer>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'xjybenyq' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
