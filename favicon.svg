@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#12161c"/>
+
+  <!-- corner marks, echoing the project card style -->
+  <path d="M4 9 V4 H9" fill="none" stroke="#8a744a" stroke-width="1.5"/>
+  <path d="M28 23 V28 H23" fill="none" stroke="#8a744a" stroke-width="1.5"/>
+
+  <!-- L wordmark -->
+  <path d="M12 9 V21 H21" fill="none" stroke="#c9a15a" stroke-width="2.6" stroke-linecap="square"/>
+</svg>
