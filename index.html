@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
@@ -135,7 +136,16 @@
     </div>
   </div>
 
-  <div class="contact-form-panel">
+  <button id="open-contact-btn" class="btn-open-contact">Send a message</button>
+
+  <div class="footer-bottom">© 2026 Ledger. Built by hand.</div>
+</footer>
+
+<div id="contact-modal-overlay" class="modal-overlay" hidden>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button id="close-contact-btn" class="modal-close" aria-label="Close">✕</button>
+    <div class="section-tag" id="modal-title">Get in touch</div>
+
     <div data-fs-success class="fs-success"></div>
     <div data-fs-error class="fs-error"></div>
 
@@ -168,18 +178,55 @@
         <span data-fs-error="message" class="field-error"></span>
       </div>
 
+      <div class="form-row">
+        <div class="g-recaptcha" data-sitekey="6LdkJ4ktAAAAACf6ZDdo4RbdaW3rHXb3Mjbf4Db4"></div>
+      </div>
+
       <button type="submit" data-fs-submit-btn>Send message</button>
     </form>
   </div>
-
-  <div class="footer-bottom">© 2026 Ledger. Built by hand.</div>
-</footer>
+</div>
 
 <script>
   window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
   formspree('initForm', { formElement: '#contact-form', formId: 'xjybenyq' });
 </script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+<script>
+  const overlay = document.getElementById('contact-modal-overlay');
+  const openBtn = document.getElementById('open-contact-btn');
+  const closeBtn = document.getElementById('close-contact-btn');
+
+  function openModal(){
+    overlay.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    overlay.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !overlay.hidden) closeModal();
+  });
+
+  // Require reCAPTCHA before allowing the form to submit to Formspree.
+  // Capture phase so this runs before Formspree's own submit listener.
+  document.getElementById('contact-form').addEventListener('submit', function(e){
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse){
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      alert('Please complete the reCAPTCHA before sending.');
+    }
+  }, true);
+</script>
 
 </body>
 </html>
