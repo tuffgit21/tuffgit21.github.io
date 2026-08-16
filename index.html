@@ -1,239 +1,346 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ledger — Projects</title>
-<meta name="description" content="Ledger — a running log of projects built by Youssef, a tech enthusiast working with Python, C, and web technologies.">
-<meta property="og:title" content="Ledger — Projects">
-<meta property="og:description" content="A running log of projects built by Youssef — Python tools, a Roblox game, and more.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://tuffgit21.github.io/">
-<meta name="twitter:card" content="summary">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ledger — Projects</title>
+    <meta
+      name="description"
+      content="Ledger — a running log of projects built by Youssef, a tech enthusiast working with Python, C, and web technologies."
+    />
+    <meta property="og:title" content="Ledger — Projects" />
+    <meta
+      property="og:description"
+      content="A running log of projects built by Youssef — Python tools, a Roblox game, and more."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tuffgit21.github.io/" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="logo">Ledger<span>.</span></div>
+        <nav>
+          <a href="#work">work</a>
+          <a href="#about">about</a>
+          <a href="#contact">contact</a>
+        </nav>
+      </div>
+    </header>
 
-<header>
-  <div class="header-inner">
-    <div class="logo">Ledger<span>.</span></div>
-    <nav>
-      <a href="#work">work</a>
-      <a href="#about">about</a>
-      <a href="#contact">contact</a>
-    </nav>
-  </div>
-</header>
-
-<section class="hero wrap">
-  <div class="hero-eyebrow">Currently building</div>
-  <h1>A running log of things I've <em>built</em>, broken, and shipped.</h1>
-  <p class="hero-sub">I'm Youssef — i'm a tech guy, i love coding and tech stuff. This is where the projects live: what they are, what they're made of, and where to find them.</p>
-  <div class="hero-stats">
-    <div>
-      <div class="stat-num">04</div>
-      <div class="stat-label">projects</div>
-    </div>
-    <div>
-      <div class="stat-num">02</div>
-      <div class="stat-label">in progress</div>
-    </div>
-    <div>
-      <div class="stat-num">2026</div>
-      <div class="stat-label">building since</div>
-    </div>
-  </div>
-</section>
-
-<section class="section wrap" id="work">
-  <div class="section-head">
-    <div class="section-title">Selected work</div>
-    <div class="section-tag">04 entries — newest first</div>
-  </div>
-
-  <div class="grid">
-
-     <div class="card">
-      <div class="card-meta">
-        <div class="card-status"><span class="dot"></span>Public</div>
-        <span>2026</span>
-      </div>
-      <h3>Calculator app - Released</h3>
-      <p>A lightweight and Open-source Calculator made for systems that doesn't have calculators.</p>
-      <div class="stack"><span>Python</span></div>
-      <div class="card-links">
-        <a href="https://github.com/tuffgit21/Calculator" target="_blank">Source →</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-meta">
-        <div class="card-status"><span class="dot"></span>Public</div>
-        <span>2026</span>
-      </div>
-      <h3>PassGen GUI & CLI - Now Available</h3>
-      <p>Generate a <strong>password</strong> using the GUI (Graphical User Interface) or CLI (Command Line Interface) apps</p>
-      <div class="stack"><span>Python</span></div>
-      <div class="card-links">
-        <a href="https://github.com/tuffgit21/PassGen" target="_blank">Source →</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <div class="card-meta">
-        <div class="card-status"><span class="dot archived"></span>Archived</div>
-        <span>2026</span>
-      </div>
-      <h3>EPK-Pre-Release-0.2</h3>
-      <p>Stands for Epic Package Manager, it's a proto-type package manager like apt (for debian-based distros) currently a useless proto-type.</p>
-      <div class="stack"><span>Python</span></div>
-      <div class="card-links">
-        <a href="https://github.com/tuffgit21/tuffgit21.github.io/releases/tag/EPK-Pre-Release-0.2"target="_blank">Source →</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-meta">
-        <div class="card-status"><span class="dot archived"></span>Discontinued</div>
-        <span>2026</span>
-      </div>
-      <h3>The Hangout Chat Game - Roblox</h3>
-      <p>Made for players who can't chat in some regions. can cure boredom with friends or family member!
+    <section class="hero wrap">
+      <div class="hero-eyebrow">Currently building</div>
+      <h1>A running log of things I've <em>built</em>, broken, and shipped.</h1>
+      <p class="hero-sub">
+        I'm Youssef — i'm a tech guy, i love coding and tech stuff. This is
+        where the projects live: what they are, what they're made of, and where
+        to find them.
       </p>
-      <div class="stack"><span>Lua</span><span>Roblox Studio</span></div>
-      <div class="card-links">
-        <a href="https://www.roblox.com/games/99404489930995/The-Hangout-Chat-Game" target="_blank">View site →</a>
-      
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">04</div>
+          <div class="stat-label">projects</div>
+        </div>
+        <div>
+          <div class="stat-num">02</div>
+          <div class="stat-label">in progress</div>
+        </div>
+        <div>
+          <div class="stat-num">2026</div>
+          <div class="stat-label">building since</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="work">
+      <div class="section-head">
+        <div class="section-title">Selected work</div>
+        <div class="section-tag">04 entries — newest first</div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-meta">
+            <div class="card-status"><span class="dot"></span>Public</div>
+            <span>2026</span>
+          </div>
+          <h3>Calculator app - Released</h3>
+          <p>
+            A lightweight and Open-source Calculator made for systems that
+            doesn't have calculators.
+          </p>
+          <div class="stack"><span>Python</span></div>
+          <div class="card-links">
+            <a href="https://github.com/tuffgit21/Calculator" target="_blank"
+              >Source →</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-meta">
+            <div class="card-status"><span class="dot"></span>Public</div>
+            <span>2026</span>
+          </div>
+          <h3>PassGen GUI & CLI - Now Available</h3>
+          <p>
+            Generate a <strong>password</strong> using the GUI (Graphical User
+            Interface) or CLI (Command Line Interface) apps
+          </p>
+          <div class="stack"><span>Python</span></div>
+          <div class="card-links">
+            <a href="https://github.com/tuffgit21/PassGen" target="_blank"
+              >Source →</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-meta">
+            <div class="card-status">
+              <span class="dot archived"></span>Archived
+            </div>
+            <span>2026</span>
+          </div>
+          <h3>EPK-Pre-Release-0.2</h3>
+          <p>
+            Stands for Epic Package Manager, it's a proto-type package manager
+            like apt (for debian-based distros) currently a useless proto-type.
+          </p>
+          <div class="stack"><span>Python</span></div>
+          <div class="card-links">
+            <a
+              href="https://github.com/tuffgit21/tuffgit21.github.io/releases/tag/EPK-Pre-Release-0.2"
+              target="_blank"
+              >Source →</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-meta">
+            <div class="card-status">
+              <span class="dot archived"></span>Discontinued
+            </div>
+            <span>2026</span>
+          </div>
+          <h3>The Hangout Chat Game - Roblox</h3>
+          <p>
+            Made for players who can't chat in some regions. can cure boredom
+            with friends or family member!
+          </p>
+          <div class="stack"><span>Lua</span><span>Roblox Studio</span></div>
+          <div class="card-links">
+            <a
+              href="https://www.roblox.com/games/99404489930995/The-Hangout-Chat-Game"
+              target="_blank"
+              >View site →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="about">
+      <div class="section-head">
+        <div class="section-title">About</div>
+        <div class="section-tag">who's building this</div>
+      </div>
+      <div class="about">
+        <div>
+          <p>Hey,I'm Youssef!</p>
+          <p>
+            I'm a tech enthusiast and programmer who enjoys building things,
+            experimenting with Linux, and learning how computers work. I mainly
+            work with Python, C, and web technologies, and I'm always working on
+            new projects.
+          </p>
+        </div>
+        <div class="about-list">
+          <div><span>Based in</span><span>Lebanon</span></div>
+          <div><span>Focus</span><span>Web, ML, etc.</span></div>
+          <div>
+            <span>Available for</span><span>Freelance / full-time</span>
+          </div>
+          <div><span>Currently</span><span>Building Projects</span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="wrap" id="contact">
+      <div class="footer-inner">
+        <div class="contact-title">Have a project in mind? Let's talk.</div>
+        <div class="footer-links">
+          <!--<a href="mailto:you@email.com">Email</a>-->
+          <a
+            href="https://github.com/tuffgit21/"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://tiktok.com/@i.love_coding"
+            target="_blank"
+            aria-label="TikTok"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.1 1.82 2.89 2.89 0 0 1 5.1-1.82V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-.36-.04z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://discord.gg/nNTrCmrS6y"
+            target="_blank"
+            aria-label="Discord"
+          >
+            <svg viewBox="0 0 25 24" fill="currentColor">
+              <path
+                d="M20.317 4.3671a19.8067 19.8067 0 0 0-4.8851-1.5152.074.074 0 0 0-.0784.0371c-.211.3671-.4447.8467-.6083 1.2251.9493-.1431 1.8796-.3389 2.7954-.5352a.077.077 0 0 1 .0816.0325c.2847.494.5848 1.0055.8571 1.5323a.0745.0745 0 0 1-.0019.0679c-1.6033.4895-3.3855.7081-5.1497.7081-1.7643 0-3.5468-.2186-5.1497-.708a.077.077 0 0 1-.009-.068s.3726-1.0395.8554-1.5323a.0743.0743 0 0 1 .0823-.0325 13.501 13.501 0 0 0 2.7964.5335c-.1692-.3976-.3975-.7651-.6084-1.2251a.077.077 0 0 0-.0784-.037 19.7363 19.7363 0 0 0-4.8852 1.515.0699.0699 0 0 0-.032.0446C1.533 9.046.908 13.627 2.18 18.032a.0783.0783 0 0 0 .0303.0526c1.917 1.414 3.971 2.27 5.9365 2.834a.0777.0777 0 0 0 .0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9885a.076.076 0 0 0-.0414-.106 12.972 12.972 0 0 1-1.85-.892.077.077 0 0 1-.008-.128 1.713 1.713 0 0 0 .062-.1008.0766.0766 0 0 1 .08-.047c3.928 1.793 8.18 1.793 12.062 0a.0766.0766 0 0 1 .083.047c.019.031.041.062.062.1a.077.077 0 0 1-.007.127 12.58 12.58 0 0 1-1.853.892.076.076 0 0 0-.041.106c.36.693.773 1.359 1.225 1.989a.077.077 0 0 0 .084.027 19.742 19.742 0 0 0 5.946-2.83.0783.0783 0 0 0 .031-.0525c1.624-5.595-.974-10.529-4.123-14.247a.061.061 0 0 0-.032-.03zM8.02 15.33c-1.183 0-2.157-.965-2.157-2.156 0-1.193.931-2.157 2.157-2.157 1.226 0 2.157.964 2.157 2.157 0 1.19-.931 2.156-2.157 2.156zm7.975 0c-1.183 0-2.157-.965-2.157-2.156 0-1.193.931-2.157 2.157-2.157 1.226 0 2.157.964 2.157 2.157 0 1.19-.931 2.156-2.157 2.156z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <button id="open-contact-btn" class="btn-open-contact">
+        Send a message
+      </button>
+
+      <div class="footer-bottom">© 2026 Ledger. Built by hand.</div>
+    </footer>
+
+    <div id="contact-modal-overlay" class="modal-overlay" hidden>
+      <div
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button id="close-contact-btn" class="modal-close" aria-label="Close">
+          ✕
+        </button>
+        <div class="section-tag" id="modal-title">Get in touch</div>
+
+        <div data-fs-success class="fs-success"></div>
+        <div data-fs-error class="fs-error"></div>
+
+        <form id="contact-form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" data-fs-field required />
+            <span data-fs-error="name" class="field-error"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              data-fs-field
+              required
+            />
+            <span data-fs-error="email" class="field-error"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="reason">Reason for contact</label>
+            <select id="reason" name="reason" data-fs-field>
+              <option value="Hiring / freelance">Hiring / freelance</option>
+              <option value="Collaboration">Collaboration</option>
+              <option value="Bug report">Bug report</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              data-fs-field
+              required
+              rows="5"
+            ></textarea>
+            <span data-fs-error="message" class="field-error"></span>
+          </div>
+
+          <div class="form-row">
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LdkJ4ktAAAAACf6ZDdo4RbdaW3rHXb3Mjbf4Db4"
+            ></div>
+          </div>
+
+          <button type="submit" data-fs-submit-btn>Send message</button>
+        </form>
       </div>
     </div>
 
-  </div>
-</section>
+    <script>
+      window.formspree =
+        window.formspree ||
+        function () {
+          (formspree.q = formspree.q || []).push(arguments);
+        };
+      formspree("initForm", {
+        formElement: "#contact-form",
+        formId: "xjybenyq",
+      });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
-<section class="section wrap" id="about">
-  <div class="section-head">
-    <div class="section-title">About</div>
-    <div class="section-tag">who's building this</div>
-  </div>
-  <div class="about">
-    <div>
-      <p>Hey,I'm Youssef!</p>
-      <p>I'm a tech enthusiast and programmer who enjoys building things, experimenting with Linux, and learning how computers work. I mainly work with Python, C, and web technologies, and I'm always working on new projects.</p>
-    </div>
-    <div class="about-list">
-      <div><span>Based in</span><span>Lebanon</span></div>
-      <div><span>Focus</span><span>Web, ML, etc.</span></div>
-      <div><span>Available for</span><span>Freelance / full-time</span></div>
-      <div><span>Currently</span><span>Building Projects</span></div>
-    </div>
-  </div>
-</section>
+    <script>
+      const overlay = document.getElementById("contact-modal-overlay");
+      const openBtn = document.getElementById("open-contact-btn");
+      const closeBtn = document.getElementById("close-contact-btn");
 
-<footer class="wrap" id="contact">
-  <div class="footer-inner">
-    <div class="contact-title">Have a project in mind? Let's talk.</div>
-    <div class="footer-links">
-      <!--<a href="mailto:you@email.com">Email</a>-->
-      <a href="https://github.com/tuffgit21/" target="_blank">GitHub</a>
-      <a href="https://tiktok.com/@i.love_coding">Tiktok</a>
-      <a href="https://discord.gg/nNTrCmrS6y" target="_blank">Discord</a>
-    </div>
-  </div>
+      function openModal() {
+        overlay.hidden = false;
+        document.body.style.overflow = "hidden";
+      }
+      function closeModal() {
+        overlay.hidden = true;
+        document.body.style.overflow = "";
+      }
 
-  <button id="open-contact-btn" class="btn-open-contact">Send a message</button>
+      openBtn.addEventListener("click", openModal);
+      closeBtn.addEventListener("click", closeModal);
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) closeModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !overlay.hidden) closeModal();
+      });
 
-  <div class="footer-bottom">© 2026 Ledger. Built by hand.</div>
-</footer>
-
-<div id="contact-modal-overlay" class="modal-overlay" hidden>
-  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <button id="close-contact-btn" class="modal-close" aria-label="Close">✕</button>
-    <div class="section-tag" id="modal-title">Get in touch</div>
-
-    <div data-fs-success class="fs-success"></div>
-    <div data-fs-error class="fs-error"></div>
-
-    <form id="contact-form">
-      <div class="form-row">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" data-fs-field required />
-        <span data-fs-error="name" class="field-error"></span>
-      </div>
-
-      <div class="form-row">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" data-fs-field required />
-        <span data-fs-error="email" class="field-error"></span>
-      </div>
-
-      <div class="form-row">
-        <label for="reason">Reason for contact</label>
-        <select id="reason" name="reason" data-fs-field>
-          <option value="Hiring / freelance">Hiring / freelance</option>
-          <option value="Collaboration">Collaboration</option>
-          <option value="Bug report">Bug report</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-
-      <div class="form-row">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" data-fs-field required rows="5"></textarea>
-        <span data-fs-error="message" class="field-error"></span>
-      </div>
-
-      <div class="form-row">
-        <div class="g-recaptcha" data-sitekey="6LdkJ4ktAAAAACf6ZDdo4RbdaW3rHXb3Mjbf4Db4"></div>
-      </div>
-
-      <button type="submit" data-fs-submit-btn>Send message</button>
-    </form>
-  </div>
-</div>
-
-<script>
-  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#contact-form', formId: 'xjybenyq' });
-</script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-
-<script>
-  const overlay = document.getElementById('contact-modal-overlay');
-  const openBtn = document.getElementById('open-contact-btn');
-  const closeBtn = document.getElementById('close-contact-btn');
-
-  function openModal(){
-    overlay.hidden = false;
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal(){
-    overlay.hidden = true;
-    document.body.style.overflow = '';
-  }
-
-  openBtn.addEventListener('click', openModal);
-  closeBtn.addEventListener('click', closeModal);
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) closeModal();
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !overlay.hidden) closeModal();
-  });
-
-  // Require reCAPTCHA before allowing the form to submit to Formspree.
-  // Capture phase so this runs before Formspree's own submit listener.
-  document.getElementById('contact-form').addEventListener('submit', function(e){
-    const recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse){
-      e.preventDefault();
-      e.stopImmediatePropagation();
-      alert('Please complete the reCAPTCHA before sending.');
-    }
-  }, true);
-</script>
-
-</body>
+      // Require reCAPTCHA before allowing the form to submit to Formspree.
+      // Capture phase so this runs before Formspree's own submit listener.
+      document.getElementById("contact-form").addEventListener(
+        "submit",
+        function (e) {
+          const recaptchaResponse = grecaptcha.getResponse();
+          if (!recaptchaResponse) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            alert("Please complete the reCAPTCHA before sending.");
+          }
+        },
+        true,
+      );
+    </script>
+  </body>
 </html>
