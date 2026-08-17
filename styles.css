@@ -149,7 +149,7 @@ h1 {
   max-width: 780px;
 }
 h1 em {
-  font-style: normal;
+  font-family:'Times New Roman', Times, serif ;
   color: var(--accent);
 }
 .hero-sub {
