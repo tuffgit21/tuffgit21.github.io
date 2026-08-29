@@ -319,8 +319,17 @@ h1 em {
   border-bottom: 1px solid transparent;
   transition: border-color 0.15s ease;
 }
+.card-links a svg {
+  vertical-align: -3px;
+  margin-right: 6px;
+}
 .card-links a:hover {
   border-color: var(--accent);
+}
+
+.about-cards,
+.contact-grid {
+  margin-top: 48px;
 }
 
 /* ---------- About ---------- */
@@ -617,6 +626,71 @@ footer {
 @media (max-width: 420px) {
   .g-recaptcha {
     transform: scale(0.82);
+  }
+}
+
+@media (max-width: 720px) {
+  .header-inner {
+    padding: 14px 18px;
+  }
+  nav {
+    gap: 16px;
+  }
+  nav a {
+    font-size: 12px;
+  }
+  .hero {
+    padding: 80px 0 56px;
+  }
+  h1 {
+    font-size: clamp(30px, 8.5vw, 44px);
+  }
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 24px 32px;
+  }
+  .section {
+    padding: 64px 0;
+  }
+  .card {
+    padding: 24px;
+  }
+  .about {
+    gap: 36px;
+  }
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-title {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-inner {
+    padding: 12px 16px;
+  }
+  nav {
+    gap: 12px;
+  }
+  .hero {
+    padding: 64px 0 48px;
+  }
+  .hero-stats {
+    gap: 20px 24px;
+  }
+  .card {
+    padding: 20px;
+  }
+  .card h3 {
+    font-size: 19px;
+  }
+  .section-head {
+    margin-bottom: 32px;
+  }
+  .modal-panel {
+    padding: 28px 20px;
   }
 }
 
