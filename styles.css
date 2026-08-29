@@ -370,6 +370,8 @@ h1 em {
 footer {
   border-top: 1px solid var(--line);
   padding: 60px 0 40px;
+  scroll-margin-top: 80px;
+  scroll-margin-bottom: calc(62px + env(safe-area-inset-bottom));
 }
 .footer-inner {
   display: flex;
@@ -718,7 +720,7 @@ footer {
     height: 18px;
   }
   body {
-    padding-bottom: 56px;
+    padding-bottom: calc(62px + env(safe-area-inset-bottom));
   }
   .hero {
     padding: 80px 0 56px;
