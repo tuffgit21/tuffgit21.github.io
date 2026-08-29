@@ -34,15 +34,29 @@
     <header>
       <div class="header-inner">
         <div class="logo">Ledger<span>.</span></div>
-        <nav>
-          <a href="#work">work</a>
-          <a href="#about">about</a>
-          <a href="#contact">contact</a>
+        <nav style="border-radius: 100px;">
+          <span class="nav-indicator" aria-hidden="true"></span>
+          <a href="#home">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+            <span>home</span>
+          </a>
+          <a href="#work">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            <span>work</span>
+          </a>
+          <a href="#about">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+            <span>about</span>
+          </a>
+          <a href="#contact">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.5A8 8 0 1 1 21 12z"/></svg>
+            <span>contact</span>
+          </a>
         </nav>
       </div>
     </header>
 
-    <section class="hero wrap">
+    <section class="hero wrap" id="home">
       <div class="hero-eyebrow">Currently building</div>
       <h1>A running log of things I've <em><i>built</i></em>, broken, and shipped.</h1>
       <p class="hero-sub">
@@ -427,6 +441,69 @@
         },
         true,
       );
+    </script>
+
+    <script>
+      (function () {
+        var links = Array.prototype.slice.call(document.querySelectorAll("nav a"));
+        var map = {};
+        links.forEach(function (a) {
+          var id = (a.getAttribute("href") || "").replace("#", "");
+          var sec = id && document.getElementById(id);
+          if (sec) map[id] = a;
+        });
+        var ids = Object.keys(map);
+
+        var indicator = document.querySelector(".nav-indicator");
+
+        function moveIndicator(link) {
+          if (!indicator) return;
+          if (!link) {
+            indicator.style.opacity = "0";
+            return;
+          }
+          indicator.style.opacity = "1";
+          indicator.style.width = link.offsetWidth + "px";
+          indicator.style.transform = "translateX(" + link.offsetLeft + "px)";
+        }
+
+        function setActive(id) {
+          links.forEach(function (a) {
+            a.classList.remove("active");
+            a.removeAttribute("aria-current");
+          });
+          if (map[id]) {
+            map[id].classList.add("active");
+            map[id].setAttribute("aria-current", "true");
+            moveIndicator(map[id]);
+          }
+        }
+
+        window.addEventListener("resize", function () {
+          var current = document.querySelector("nav a.active");
+          moveIndicator(current);
+        });
+
+        if ("IntersectionObserver" in window && ids.length) {
+          var observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) setActive(e.target.id);
+              });
+            },
+            { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+          );
+          ids.forEach(function (id) {
+            observer.observe(document.getElementById(id));
+          });
+        }
+
+        if (location.hash) setActive(location.hash.replace("#", ""));
+
+        window.addEventListener("load", function () {
+          moveIndicator(document.querySelector("nav a.active"));
+        });
+      })();
     </script>
   </body>
 </html>
