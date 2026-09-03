@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#12161c"/>
+  <path d="M0 78h1200M0 156h1200M0 234h1200M0 312h1200M0 390h1200M0 468h1200M0 546h1200M78 0v630M156 0v630M234 0v630M312 0v630M390 0v630M468 0v630M546 0v630M624 0v630M702 0v630M780 0v630M858 0v630M936 0v630M1014 0v630M1092 0v630M1170 0v630" stroke="#2b323d" stroke-width="1" opacity=".55"/>
+  <rect x="84" y="92" width="1032" height="446" fill="#1a1f27" stroke="#2b323d" stroke-width="2"/>
+  <text x="132" y="174" fill="#c9a15a" font-family="monospace" font-size="24" letter-spacing="4">LEDGER / PROJECTS</text>
+  <text x="132" y="318" fill="#e8e6df" font-family="sans-serif" font-size="68" font-weight="700">Things I've built.</text>
+  <text x="132" y="378" fill="#8b95a1" font-family="monospace" font-size="24">Python · C · Web · Linux</text>
+  <circle cx="1040" cy="174" r="9" fill="#5b8c7b"/>
+</svg>

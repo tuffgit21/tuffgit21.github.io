@@ -15,6 +15,10 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tuffgit21.github.io/" />
+    <meta
+      property="og:image"
+      content="https://tuffgit21.github.io/og-image.svg"
+    />
     <meta name="twitter:card" content="summary" />
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png" />
@@ -28,56 +32,150 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      window.LEDGER_ANALYTICS_ID = "";
+    </script>
+    <script src="site.js" defer></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
-  <body>
+  <body class="page-loading">
+    <div
+      class="page-loader"
+      data-page-loader
+      aria-label="Loading"
+      role="status"
+    >
+      <span></span>
+    </div>
     <header>
       <div class="header-inner">
-        <div class="logo">Ledger<span>.</span></div>
-        <nav style="border-radius: 100px;">
+        <div class="logo"><img src="./favicon.svg" height="25" width="25" style="border: 1px var(--accent) solid;position:relative; top:7px; border-radius:0px ;">edger<span>.</span></div>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="site-nav" style="border-radius: 1px">
           <span class="nav-indicator" aria-hidden="true"></span>
           <a href="#home">
-            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <path d="M3 11l9-8 9 8" />
+              <path d="M5 10v10h14V10" />
+            </svg>
             <span>home</span>
           </a>
           <a href="#work">
-            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <rect x="3" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="3" width="7" height="7" rx="1" />
+              <rect x="3" y="14" width="7" height="7" rx="1" />
+              <rect x="14" y="14" width="7" height="7" rx="1" />
+            </svg>
             <span>work</span>
           </a>
           <a href="#about">
-            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+            </svg>
             <span>about</span>
           </a>
           <a href="#contact">
-            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.5A8 8 0 1 1 21 12z"/></svg>
+            <svg
+              class="nav-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.5A8 8 0 1 1 21 12z" />
+            </svg>
             <span>contact</span>
           </a>
         </nav>
       </div>
     </header>
-
+    <div id="nav-backdrop" class="nav-backdrop" hidden></div>
+    <div class="mobile-cta" data-mobile-cta>
+      <a href="#work">View selected work &rarr;</a>
+      <button
+        class="mobile-cta-close"
+        type="button"
+        data-mobile-cta-close
+        aria-label="Dismiss"
+      >
+        &times;
+      </button>
+    </div>
     <section class="hero wrap" id="home">
-      <div class="hero-eyebrow">Currently building</div>
-      <h1>A running log of things I've <em><i>built</i></em>, broken, and shipped.</h1>
-      <p class="hero-sub">
-        I'm Youssef — i'm a tech guy, i love coding and tech stuff. This is
-        where the projects live: what they are, what they're made of, and where
-        to find them.
-      </p>
-      <div class="hero-stats">
-        <div>
-          <div class="stat-num">05</div>
-          <div class="stat-label">projects</div>
+      <div class="hero-main">
+        <div class="hero-eyebrow">Currently building</div>
+        <h1>
+          A running log of things I've <em><i>built</i></em
+          >, broken, and shipped.
+        </h1>
+        <p class="hero-sub">
+          I'm Youssef — i'm a tech guy, i love coding and tech stuff. This is
+          where the projects live: what they are, what they're made of, and
+          where to find them.
+        </p>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">05</div>
+            <div class="stat-label">projects</div>
+          </div>
+          <div>
+            <div class="stat-num">03</div>
+            <div class="stat-label">in progress</div>
+          </div>
+          <div>
+            <div class="stat-num">2026</div>
+            <div class="stat-label">building since</div>
+          </div>
         </div>
-        <div>
-          <div class="stat-num">03</div>
-          <div class="stat-label">in progress</div>
-        </div>
-        <div>
-          <div class="stat-num">2026</div>
-          <div class="stat-label">building since</div>
+        <div class="hero-cta">
+          <a href="#work" class="btn-primary">view work →</a>
+          <a href="#contact" class="btn-ghost">get in touch</a>
         </div>
       </div>
+      <aside class="hero-preview" aria-label="Now building">
+        <div class="hero-preview-head">
+          <span>Now</span><span>Ledger v2</span>
+        </div>
+        <pre><b>$ ledger status</b>
+building 03 projects
+shipping .deb builder
+learning systems + web</pre>
+        <div class="hero-preview-meta">
+          <span>Python</span><span>C</span><span>Web</span><span>Linux</span>
+        </div>
+      </aside>
     </section>
 
     <section class="section wrap" id="highlights">
@@ -88,18 +186,34 @@
       <div class="grid">
         <div class="card">
           <h3>Selected work</h3>
-          <p>Browse the projects I've shipped — from a .deb builder to a Roblox hangout game.</p>
+          <p>
+            Browse the projects I've shipped — from a .deb builder to a Roblox
+            hangout game.
+          </p>
           <div class="card-links"><a href="#work">View work →</a></div>
         </div>
         <div class="card">
           <h3>About me</h3>
-          <p>Tech enthusiast and programmer working with Python, C, and the web.</p>
+          <p>
+            Tech enthusiast and programmer working with Python, C, and the web.
+          </p>
           <div class="card-links"><a href="#about">Read more →</a></div>
         </div>
         <div class="card">
           <h3>Get in touch</h3>
-          <p>Have a project in mind or just want to say hi? Send a message any time.</p>
+          <p>
+            Have a project in mind or just want to say hi? Send a message any
+            time.
+          </p>
           <div class="card-links"><a href="#contact">Contact →</a></div>
+        </div>
+        <div class="card">
+          <h3>Lab notes</h3>
+          <p>
+            Experiments and snippets that haven't shipped yet — quick learnings
+            from the bench.
+          </p>
+          <div class="card-links"><a href="#work">Browse →</a></div>
         </div>
       </div>
     </section>
@@ -111,6 +225,24 @@
       </div>
 
       <div class="grid">
+        <div class="card featured">
+          <div class="card-meta">
+            <div class="card-status"><span class="dot"></span>Featured</div>
+            <span>2026 — Now</span>
+          </div>
+          <h3>Ledger — this site</h3>
+          <p>
+            Redesigned without losing the old Ledger soul — same grid, mono, and
+            accent, now with tighter type, hero preview, and featured work.
+            Built to read well on desktop and mobile.
+          </p>
+          <div class="stack">
+            <span>HTML</span><span>CSS</span><span>Design</span>
+          </div>
+          <div class="card-links">
+            <a href="#highlights">Explore highlights →</a>
+          </div>
+        </div>
         <div class="card">
           <div class="card-meta">
             <div class="card-status"><span class="dot"></span>Public</div>
@@ -118,14 +250,19 @@
           </div>
           <h3>Debian App Builder - Now Released</h3>
           <p>
-            A Windows (WSL) and debian-based distributions utility to make <strong>.deb</strong> apps with ease!
+            A Windows (WSL) and debian-based distributions utility to make
+            <strong>.deb</strong> apps with ease!
           </p>
           <div class="stack"><span>Python</span></div>
           <div class="card-links">
-            <a href="https://github.com/tuffgit21/Debian-App-Builder/" target="_blank"
+            <a
+              href="https://github.com/tuffgit21/Debian-App-Builder/"
+              target="_blank"
               >Source</a
             >
-            <a href="https://tuffgit21.github.io/Debian-App-Builder/" target="_blank"
+            <a
+              href="https://tuffgit21.github.io/Debian-App-Builder/"
+              target="_blank"
               >View site →</a
             >
           </div>
@@ -140,7 +277,10 @@
             A lightweight and Open-source Calculator made for systems that
             doesn't have calculators.
           </p>
-          <div class="stack"><span>Python</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <div class="stack">
+            <span>Python</span><span>HTML</span><span>CSS</span
+            ><span>JavaScript</span>
+          </div>
           <div class="card-links">
             <a href="https://github.com/tuffgit21/LightCalc" target="_blank"
               >Source</a
@@ -150,7 +290,6 @@
             >
           </div>
         </div>
-        
 
         <div class="card">
           <div class="card-meta">
@@ -167,7 +306,9 @@
             <a href="https://github.com/tuffgit21/PassGen" target="_blank"
               >Source</a
             >
-            <a href="https://github.com/tuffgit21/PassGen/releases" target="_blank"
+            <a
+              href="https://github.com/tuffgit21/PassGen/releases"
+              target="_blank"
               >Download →</a
             >
           </div>
@@ -187,7 +328,8 @@
           </p>
           <div class="stack"><span>Python</span></div>
           <div class="card-links">
-            <a style="cursor:pointer;"
+            <a
+              style="cursor: pointer"
               onclick="alert('This project is inaccessible right now.')"
               >Source →</a
             >
@@ -202,7 +344,8 @@
           </div>
           <h3>The Hangout Chat Game - Roblox</h3>
           <p>
-            A Roblox social game designed to give players a place to hangout and interact with friends.
+            A Roblox social game designed to give players a place to hangout and
+            interact with friends.
           </p>
           <div class="stack"><span>Lua</span></div>
           <div class="card-links">
@@ -219,7 +362,6 @@
     <section class="section wrap" id="about">
       <div class="section-head">
         <div class="section-title">About</div>
-        
       </div>
       <div class="about">
         <div>
@@ -231,8 +373,6 @@
             new projects.
           </p>
         </div>
-        
-
       </div>
       <h2>Who's Building This?</h2>
       <div class="grid about-cards">
@@ -261,14 +401,28 @@
 
     <footer class="wrap" id="contact">
       <div class="footer-inner">
-        <div class="contact-title">Have a project in mind? Let's talk.</div>
+        <div class="contact-title" style="position: relative;top:15px;">Have a project in mind? Let's talk.</div>
         <div class="grid contact-grid">
           <div class="card">
             <h3>GitHub</h3>
             <p>Source code, repositories, and releases.</p>
             <div class="card-links">
-              <a href="https://github.com/tuffgit21/" target="_blank" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <a
+                href="https://github.com/tuffgit21/"
+                target="_blank"
+                aria-label="GitHub"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
                 Profile →
               </a>
             </div>
@@ -277,8 +431,22 @@
             <h3>TikTok</h3>
             <p>Quick coding clips and builds.</p>
             <div class="card-links">
-              <a href="https://tiktok.com/@i.love_coding" target="_blank" aria-label="TikTok">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+              <a
+                href="https://tiktok.com/@i.love_coding"
+                target="_blank"
+                aria-label="TikTok"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                  />
+                </svg>
                 Follow →
               </a>
             </div>
@@ -287,8 +455,22 @@
             <h3>Discord</h3>
             <p>Chat, ask questions, and hang out.</p>
             <div class="card-links">
-              <a href="https://discord.gg/nNTrCmrS6y" target="_blank" aria-label="Discord">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M20.317 4.369a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.249a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.036A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.009c.12.099.246.198.373.292a.077.077 0 01-.006.127 12.3 12.3 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.84 19.84 0 006.002-3.03.077.077 0 00.032-.056c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.027zM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+              <a
+                href="https://discord.gg/nNTrCmrS6y"
+                target="_blank"
+                aria-label="Discord"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.317 4.369a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.249a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.036A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.009c.12.099.246.198.373.292a.077.077 0 01-.006.127 12.3 12.3 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.84 19.84 0 006.002-3.03.077.077 0 00.032-.056c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.027zM8.02 15.331c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"
+                  />
+                </svg>
                 Join →
               </a>
             </div>
@@ -297,8 +479,22 @@
             <h3>Instagram</h3>
             <p>Behind-the-scenes and updates.</p>
             <div class="card-links">
-              <a href="https://www.instagram.com/prvtt_yousef_2/" target="_blank" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <a
+                href="https://www.instagram.com/prvtt_yousef_2/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                  />
+                </svg>
                 Follow →
               </a>
             </div>
@@ -307,8 +503,22 @@
             <h3>Telegram</h3>
             <p>Direct messages and quick replies.</p>
             <div class="card-links">
-              <a href="https://t.me/tuffgit21" target="_blank" aria-label="Telegram">
-                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.334-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              <a
+                href="https://t.me/tuffgit21"
+                target="_blank"
+                aria-label="Telegram"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.334-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                  />
+                </svg>
                 Message →
               </a>
             </div>
@@ -316,14 +526,20 @@
         </div>
       </div>
 
-      <button id="open-contact-btnn" class="btn-open-contact">
-        <a href="https://forms.gle/stxDfYXyTWA26EL48" target="_blank">Send a form</a>
+      <button id="open-contact-btn" class="btn-open-contact">
+        <a href="https://forms.gle/stxDfYXyTWA26EL48" target="_blank"
+          >Send a form</a
+        >
       </button>
 
-      <div class="footer-bottom">© 2026 Ledger. Built by hand.</div>
+      <div class="footer-bottom">
+        © 2026 Ledger. Built by hand.
+        <a class="legal-link" href="privacy.html">Privacy</a> ·
+        <a class="legal-link" href="terms.html">Terms</a>
+      </div>
     </footer>
 
-    <div id="contact-modal-overlay" class="modal-overlay" hidden>
+    <!---<div id="contact-modal-overlay" class="modal-overlay" hidden>
       <div
         class="modal-panel"
         role="dialog"
@@ -389,6 +605,23 @@
           <button type="submit" data-fs-submit-btn>Send message</button>
         </form>
       </div>
+    </div>--->
+
+    <div
+      class="cookie-banner"
+      data-cookie-banner
+      hidden
+      role="dialog"
+      aria-label="Cookie preferences"
+    >
+      <p>
+        Ledger uses optional analytics cookies to understand site visits.
+        <a href="privacy.html">Privacy policy</a>
+      </p>
+      <div>
+        <button class="btn-primary" data-cookie-accept>Accept</button
+        ><button class="btn-ghost" data-cookie-decline>Decline</button>
+      </div>
     </div>
 
     <script>
@@ -445,7 +678,9 @@
 
     <script>
       (function () {
-        var links = Array.prototype.slice.call(document.querySelectorAll("nav a"));
+        var links = Array.prototype.slice.call(
+          document.querySelectorAll("nav a"),
+        );
         var map = {};
         links.forEach(function (a) {
           var id = (a.getAttribute("href") || "").replace("#", "");
@@ -491,7 +726,7 @@
                 if (e.isIntersecting) setActive(e.target.id);
               });
             },
-            { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+            { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
           );
           ids.forEach(function (id) {
             observer.observe(document.getElementById(id));
@@ -502,6 +737,42 @@
 
         window.addEventListener("load", function () {
           moveIndicator(document.querySelector("nav a.active"));
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var btn = document.getElementById("hamburger");
+        var nav = document.getElementById("site-nav");
+        var backdrop = document.getElementById("nav-backdrop");
+        if (!btn || !nav) return;
+        function openNav() {
+          nav.classList.add("open");
+          btn.setAttribute("aria-expanded", "true");
+          btn.setAttribute("aria-label", "Close menu");
+          if (backdrop) backdrop.hidden = false;
+          document.body.style.overflow = "hidden";
+        }
+        function closeNav() {
+          nav.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+          btn.setAttribute("aria-label", "Open menu");
+          if (backdrop) backdrop.hidden = true;
+          document.body.style.overflow = "";
+        }
+        btn.addEventListener("click", function () {
+          if (nav.classList.contains("open")) closeNav();
+          else openNav();
+        });
+        if (backdrop) backdrop.addEventListener("click", closeNav);
+        nav.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            // let the link navigate first, then close drawer
+            setTimeout(closeNav, 120);
+          });
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && nav.classList.contains("open")) closeNav();
         });
       })();
     </script>

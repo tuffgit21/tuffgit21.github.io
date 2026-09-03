@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — Page not found | Ledger</title>
+    <meta
+      name="description"
+      content="The page you were looking for could not be found."
+    />
+    <meta property="og:title" content="404 — Page not found | Ledger" />
+    <meta
+      property="og:description"
+      content="The page you were looking for could not be found."
+    />
+    <meta
+      property="og:image"
+      content="https://tuffgit21.github.io/og-image.svg"
+    />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      window.LEDGER_ANALYTICS_ID = "";
+    </script>
+    <script src="site.js" defer></script>
+  </head>
+  <body class="page-loading">
+    <div
+      class="page-loader"
+      data-page-loader
+      aria-label="Loading"
+      role="status"
+    >
+      <span></span>
+    </div>
+    <header>
+      <div class="header-inner">
+        <a class="logo" href="/">Ledger<span>.</span></a>
+        <nav aria-label="Main navigation">
+          <a href="/#home">home</a>
+          <a href="/#work">work</a>
+          <a href="/#about">about</a>
+          <a href="/#contact">contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="not-found wrap">
+      <section class="not-found-inner" aria-labelledby="not-found-title">
+        <div class="not-found-code" aria-hidden="true">404</div>
+        <h1 id="not-found-title">This page went missing.</h1>
+        <p>The link may be outdated, or this page has not been shipped yet.</p>
+        <a class="btn-primary" href="/">Return home &rarr;</a>
+      </section>
+    </main>
+    <div
+      class="cookie-banner"
+      data-cookie-banner
+      hidden
+      role="dialog"
+      aria-label="Cookie preferences"
+    >
+      <p>
+        Ledger uses optional analytics cookies to understand site visits.
+        <a href="privacy.html">Privacy policy</a>
+      </p>
+      <div>
+        <button class="btn-primary" data-cookie-accept>Accept</button
+        ><button class="btn-ghost" data-cookie-decline>Decline</button>
+      </div>
+    </div>
+  </body>
+</html>
