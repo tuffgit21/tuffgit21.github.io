@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="46" viewBox="0 0 112 32" role="img" aria-label="Ledger edger logo">
+  <defs>
+    <style>
+      .wordmark {
+        fill: #e8e6df;
+        font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 15px;
+        letter-spacing: 0.02em;
+      }
+      .dot {
+        fill: #c9a15a;
+      }
+    </style>
+  </defs>
+
+  <g>
+    <svg x="1" y="4" width="23" height="23" viewBox="0 0 32 32" aria-hidden="true">
+      <rect width="32" height="32" fill="#12161c"/>
+      <path d="M4 9 V4 H9" fill="none" stroke="#8a744a" stroke-width="1.5"/>
+      <path d="M28 23 V28 H23" fill="none" stroke="#8a744a" stroke-width="1.5"/>
+      <path d="M12 9 V21 H21" fill="none" stroke="#c9a15a" stroke-width="2.6" stroke-linecap="square"/>
+    </svg>
+    <rect x="0.5" y="3.5" width="24" height="24" fill="none" stroke="#c9a15a" stroke-width="1"/>
+    <text x="25" y="22" class="wordmark">edger<tspan class="dot">.</tspan></text>
+  </g>
+</svg>

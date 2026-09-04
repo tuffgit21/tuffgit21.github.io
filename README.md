@@ -1,4 +1,6 @@
-# Ledger
+<p align="center">
+	<img src="Ledger-logo.svg" alt="Ledger logo" width="160" />
+</p>
 
 [![Website](https://img.shields.io/badge/site-tuffgit21.github.io-blue?style=for-the-badge)](https://tuffgit21.github.io/)
 [![Status](https://img.shields.io/badge/status-live-success?style=for-the-badge)](https://tuffgit21.github.io/)
@@ -36,7 +38,7 @@ The live site is available here:
 - `privacy.html` — privacy policy
 - `terms.html` — terms page
 - `Files.html` — project files listing
-- `favicon.svg` and related favicon files — branding assets
+- `Ledger-logo.svg`, `favicon.svg`, and related favicon files — branding assets
 - `og-image.svg` — social preview image
 - `LICENSE.txt` — project license
 
