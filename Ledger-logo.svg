@@ -3,6 +3,10 @@
     <style>
       .wordmark {
         fill: #e8e6df;
+        stroke: #000;
+        stroke-width: 1px;
+        paint-order: stroke fill;
+        filter: url(#wordmark-shadow);
         font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
         font-size: 15px;
         letter-spacing: 0.02em;
@@ -11,6 +15,9 @@
         fill: #c9a15a;
       }
     </style>
+    <filter id="wordmark-shadow" x="-10%" y="-20%" width="120%" height="150%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
   </defs>
 
   <g>
