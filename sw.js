@@ -1,5 +1,5 @@
 /* Ledger — Service Worker for PWA install on Android */
-const CACHE_VERSION = 'ledger-v1';
+const CACHE_VERSION = 'ledger-v2';
 const CORE_CACHE = CACHE_VERSION + '-core';
 const RUNTIME_CACHE = CACHE_VERSION + '-runtime';
 
@@ -14,6 +14,7 @@ const CORE_ASSETS = [
   './favicon-96.png',
   './favicon-48.png',
   './favicon-192.png',
+  './favicon-512.png',
   './og-image.svg',
   './Ledger-logo.svg'
 ];
