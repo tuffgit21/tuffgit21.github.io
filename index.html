@@ -26,6 +26,11 @@
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#12161c" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Ledger" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
@@ -765,6 +770,27 @@ learning systems + web</pre>
           moveIndicator(document.querySelector("nav a.active"));
         });
       })();
+    </script>
+    <script>
+      // PWA install — register service worker for Android
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js', {scope: './'}).then(reg => {
+            reg.addEventListener('updatefound', () => {
+              const w = reg.installing;
+              if (w) w.addEventListener('statechange', () => {
+                if (w.state === 'installed' && navigator.serviceWorker.controller) {
+                  console.log('Ledger: new content available');
+                }
+              });
+            });
+          }).catch(err => console.warn('SW registration failed:', err));
+        });
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (!refreshing) { refreshing = true; window.location.reload(); }
+        });
+      }
     </script>
     <script>
       (function () {
