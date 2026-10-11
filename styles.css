@@ -9,7 +9,7 @@
     --border : rgba(0,0,0,0.08);
     --backtohp: var(--surface);
     --card: #1e1e1e;
-    --font: font-family: system-ui, -apple-system, sans-serif;
+    --font: system-ui, -apple-system, sans-serif;
 }
 * {
     margin: 0;
