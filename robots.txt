@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tuffgit21.github.io/sitemap.xml
+Sitemap: https://tuffgit21.is-a.dev/sitemap.xml

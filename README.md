@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="Ledger-logo.svg" alt="Ledger logo" width="160" />
+	<img src="./sites.old/Ledger/Ledger-logo.svg" alt="Ledger logo" width="160" />
 </p>
 
 [![Website](https://img.shields.io/badge/site-tuffgit21.github.io-blue?style=for-the-badge)](https://tuffgit21.github.io/)

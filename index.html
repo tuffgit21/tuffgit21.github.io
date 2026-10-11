@@ -3,48 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirection</title>
-    <style>
-        h1 {
-            display: flex;
-            max-width: 200vw;
-            width: 100%;
-            height: auto;
-            
-        }
-        @media (max-width: 600px){
-            h1 {
-                
-                font-size: 5vw;
-            }
-        }
-    </style>
+    <meta name="description" content="Youssef — Python/C developer building PyShell, Debian App Builder and open-source tools.">
+    <title>Youssef's Projects</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Index of https://tuffgit21.is-a.dev/</h1>
-    <a href="https://tuffgit21.is-a.dev/tuffgit21">About Me</a>
-    <p>Main site is currently under maintenance
-    </p>
-    <h3>Visit these projects sites:</h3>
-    <ul type="disc">
-        <li>
-            <a href="https://tuffgit21.is-a.dev/Debian-App-Builder">Debian App Builder site</a>
-        </li>
-        <li>
-            <a href="https://tuffgit21.is-a.dev/PyShell">PyShell site</a>
-        </li>
-        <li>
-            <a href="https://tuffgit21.is-a.dev/LightCalc">LightCalc (Discontinued)</a>
-        </li>
-        <li>
-            <a href="https://tuffgit21.is-a.dev/tuffgit21-APT-repo/">tuffgit21's apt repo</a>
-        </li>
-    </ul>
-    <h3>Or Visit old sites:</h3>
-    <ul>
-        <li>
-            <a href="./sites.old/index.html">Old sites</a>
-        </li>
-    </ul>
+    <header>
+        <h1 class="logo">Youssef's Projects</h1>
+        <nav id="main-nav">
+            <a href="#about"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info preview-icon"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>About</a>
+            <a href="#projects"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-open preview-icon"><path d="M12 22v-9"/><path d="M15.17 2.21a1.67 1.67 0 0 1 1.63 0L21 4.57a1.93 1.93 0 0 1 0 3.36L8.82 14.79a1.655 1.655 0 0 1-1.64 0L3 12.43a1.93 1.93 0 0 1 0-3.36z"/><path d="M20 13v3.87a2.06 2.06 0 0 1-1.11 1.83l-6 3.08a1.93 1.93 0 0 1-1.78 0l-6-3.08A2.06 2.06 0 0 1 4 16.87V13"/><path d="M21 12.43a1.93 1.93 0 0 0 0-3.36L8.83 2.2a1.64 1.64 0 0 0-1.63 0L3 4.57a1.93 1.93 0 0 0 0 3.36l12.18 6.86a1.636 1.636 0 0 0 1.63 0z"/></svg>Projects</a>
+            <a href="#archives"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package preview-icon"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>Archives</a>
+            <a href="#contact"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-circle preview-icon"><path d="M19.95 10.05a7 7 0 011.412 7.872 1 1 0 00-.058.787l.675 2.089a1 1 0 01-1.236 1.168l-2.155-.631a1 1 0 00-.745.06 7 7 0 01-7.793-1.445"/><path d="M2.696 12.708a1 1 0 00-.058-.785 7 7 0 113.518 3.473 1 1 0 00-.744-.061l-2.155.63a1 1 0 01-1.236-1.167z"/></svg>Contact</a>
+        </nav>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>I build tools, do experiments, apps & Debian packages.</h2>
+            <p>Python, C, HTML/CSS - Check out my projects below.</p>
+            <a href="#projects" class="btn">View Projects →</a>
+        </section>
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <article class="about-content">
+                    <h2>Hello 👋 I'm Youssef.</h2> 
+                    <p>I like coding and tech stuff — from Python GUIs to Debian packaging.</p>
+                    <p>I make tools, apps and projects that are useful for people. Currently focused on <strong>PyShell</strong> and <strong>Debian App Builder</strong>, learning C and polishing my web skills.</p>
+                    <div class="about-stats">
+                        <div><strong>7+</strong><span>Projects</span></div>
+                        <div><strong>3</strong><span>Languages</span></div>
+                        <div><strong>2026</strong><span>Since</span></div>
+                    </div>
+                </article>
+                <aside class="about-side">
+                    <h4>Stack & Tools</h4>
+                    <div class="skill-list">
+                        <span>Python</span><span>C</span><span>HTML/CSS/JS</span><span>Linux</span><span>Git</span><span>Debian</span>
+                    </div>
+                    <h4 style="margin-top: 16px;">Currently</h4>
+                    <p class="muted">Learning and exploring programming languages</p>
+                </aside>
+            </div>
+        </section>
+        <section id="projects" class="projects">
+            <h2>My Projects — NEWEST FIRST</h2>
+            <div class="grid">
+                <article class="card">
+                    <h4>PyShell | 16-9-2026</h4> 
+                    <p>A fast, Python-powered shell.</p>
+                    <span class="tag">Python</span>
+                    <br><br>
+                    <a href="https://github.com/tuffgit21/PyShell" target="_blank">View repository →</a>
+                    <br>
+                    <a href="https://tuffgit21.is-a.dev/PyShell/">View site →</a>
+                </article>
+                <article class="card">
+                    <h4>Debian App Builder | 20-8-2026</h4>
+                    <p>GUI tool to build .deb packages without touching the terminal.</p>
+                    <span class="tag">Python ( last version: 4.X )</span>
+                    <span class="tag">C ( Rewriting Coming soon )</span>
+                    <br><br>
+                    <a href="https://github.com/tuffgit21/Debian-App-Builder" target="_blank">View repository →</a>
+                    <br>
+                    <a href="https://tuffgit21.is-a.dev/Debian-App-Builder">View site →</a>
+                </article>
+                
+            </div>
+        </section>
+        <section class="ad" id="ad">
+            <h3>Also check:</h3>
+            <div class="grid">
+                <article class="card">
+                    <ul>
+                        <li> <a href="https://tuffgit21.is-a.dev/tuffgit21-APT-repo/">APT repository</a> - for downloading apps on Debian-based linux distro using terminal or software app.</li>
+                        
+                        
+                    </ul>
+                </article>
+            </div>
+        </section>
+        <section id="archives" class="archives">
+            <h2>Archives</h2>
+            <p class="muted">
+                Historical & discontinued projects and sites — preserved for reference.
+            </p>
+            <div class="grid">
+                <article class="card">
+                    <h4>Ledger -- Projects</h4>
+                    <p>An old projects site that featured a cool design.</p>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <br><br>
+                    <a href="./archives.html#sites">View in Archives →</a>
+                </article>
+                <article class="card">
+                    <h4>tuffgit21 games</h4>
+                    <p>An old game project sites for Roblox games.</p>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <br><br>
+                    <a href="./archives.html#sites">View in Archives →</a>
+                </article>
+                <article class="card">
+                    <h4>LightCalc</h4>
+                    <p>Lightweight calculator for systems without one.</p>
+                    <span class="tag">Python</span>
+                    <br><br>
+                    <a href="./archives.html">View in Archives →</a>
+                </article>
+                <article class="card">
+                    <h4>PassGen</h4>
+                    <p>Password generator - Comes with GUI & CLI versions.</p>
+                    <span class="tag">Python</span>
+                    <br><br>
+                    <a href="./archives.html">View in Archives →</a>
+                </article>
+            </div>
+            <p style="margin-top: 16px;"><a href="./archives.html" class="btn btn-secondary">View All Archives →</a></p>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact me</h2>
+            <div class="grid">
+                <article class="contact-card">
+                    <a href="https://github.com/tuffgit21/" target="_blank" class="contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"><path d="M16,2.345c7.735,0,14,6.265,14,14-.002,6.015-3.839,11.359-9.537,13.282-.7,.14-.963-.298-.963-.665,0-.473,.018-1.978,.018-3.85,0-1.312-.437-2.152-.945-2.59,3.115-.35,6.388-1.54,6.388-6.912,0-1.54-.543-2.783-1.435-3.762,.14-.35,.63-1.785-.14-3.71,0,0-1.173-.385-3.85,1.435-1.12-.315-2.31-.472-3.5-.472s-2.38,.157-3.5,.472c-2.677-1.802-3.85-1.435-3.85-1.435-.77,1.925-.28,3.36-.14,3.71-.892,.98-1.435,2.24-1.435,3.762,0,5.355,3.255,6.563,6.37,6.913-.403,.35-.77,.963-.893,1.872-.805,.368-2.818,.963-4.077-1.155-.263-.42-1.05-1.452-2.152-1.435-1.173,.018-.472,.665,.017,.927,.595,.332,1.277,1.575,1.435,1.978,.28,.787,1.19,2.293,4.707,1.645,0,1.173,.018,2.275,.018,2.607,0,.368-.263,.787-.963,.665-5.719-1.904-9.576-7.255-9.573-13.283,0-7.735,6.265-14,14-14Z"></path></svg>
+                        <div>
+                            <h4>GitHub</h4>
+                            <span>tuffgit21</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="contact-card">
+                    <a href="http://instagram.com/prvtt_yousef_2" target="_blank" class="contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"><path d="M10.202,2.098c-1.49,.07-2.507,.308-3.396,.657-.92,.359-1.7,.84-2.477,1.619-.776,.779-1.254,1.56-1.61,2.481-.345,.891-.578,1.909-.644,3.4-.066,1.49-.08,1.97-.073,5.771s.024,4.278,.096,5.772c.071,1.489,.308,2.506,.657,3.396,.359,.92,.84,1.7,1.619,2.477,.779,.776,1.559,1.253,2.483,1.61,.89,.344,1.909,.579,3.399,.644,1.49,.065,1.97,.08,5.771,.073,3.801-.007,4.279-.024,5.773-.095s2.505-.309,3.395-.657c.92-.36,1.701-.84,2.477-1.62s1.254-1.561,1.609-2.483c.345-.89,.579-1.909,.644-3.398,.065-1.494,.081-1.971,.073-5.773s-.024-4.278-.095-5.771-.308-2.507-.657-3.397c-.36-.92-.84-1.7-1.619-2.477s-1.561-1.254-2.483-1.609c-.891-.345-1.909-.58-3.399-.644s-1.97-.081-5.772-.074-4.278,.024-5.771,.096m.164,25.309c-1.365-.059-2.106-.286-2.6-.476-.654-.252-1.12-.557-1.612-1.044s-.795-.955-1.05-1.608c-.192-.494-.423-1.234-.487-2.599-.069-1.475-.084-1.918-.092-5.656s.006-4.18,.071-5.656c.058-1.364,.286-2.106,.476-2.6,.252-.655,.556-1.12,1.044-1.612s.955-.795,1.608-1.05c.493-.193,1.234-.422,2.598-.487,1.476-.07,1.919-.084,5.656-.092,3.737-.008,4.181,.006,5.658,.071,1.364,.059,2.106,.285,2.599,.476,.654,.252,1.12,.555,1.612,1.044s.795,.954,1.051,1.609c.193,.492,.422,1.232,.486,2.597,.07,1.476,.086,1.919,.093,5.656,.007,3.737-.006,4.181-.071,5.656-.06,1.365-.286,2.106-.476,2.601-.252,.654-.556,1.12-1.045,1.612s-.955,.795-1.608,1.05c-.493,.192-1.234,.422-2.597,.487-1.476,.069-1.919,.084-5.657,.092s-4.18-.007-5.656-.071M21.779,8.517c.002,.928,.755,1.679,1.683,1.677s1.679-.755,1.677-1.683c-.002-.928-.755-1.679-1.683-1.677,0,0,0,0,0,0-.928,.002-1.678,.755-1.677,1.683m-12.967,7.496c.008,3.97,3.232,7.182,7.202,7.174s7.183-3.232,7.176-7.202c-.008-3.97-3.233-7.183-7.203-7.175s-7.182,3.233-7.174,7.203m2.522-.005c-.005-2.577,2.08-4.671,4.658-4.676,2.577-.005,4.671,2.08,4.676,4.658,.005,2.577-2.08,4.671-4.658,4.676-2.577,.005-4.671-2.079-4.676-4.656h0"></path></svg>
+                        <div>
+                            <h4>Instagram</h4>
+                            <span>@prvtt_yousef_2</span>
+                        </div>
+                    </a>
+                    
+                </article>
+                <article class="contact-card">
+                    <a href="https://t.me/tuffgit21" target="_blank" class="contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                        <path d="M16,2c-7.732,0-14,6.268-14,14s6.268,14,14,14,14-6.268,14-14S23.732,2,16,2Zm6.489,9.521c-.211,2.214-1.122,7.586-1.586,10.065-.196,1.049-.583,1.401-.957,1.435-.813,.075-1.43-.537-2.218-1.053-1.232-.808-1.928-1.311-3.124-2.099-1.382-.911-.486-1.412,.302-2.23,.206-.214,3.788-3.472,3.858-3.768,.009-.037,.017-.175-.065-.248-.082-.073-.203-.048-.29-.028-.124,.028-2.092,1.329-5.905,3.903-.559,.384-1.065,.571-1.518,.561-.5-.011-1.461-.283-2.176-.515-.877-.285-1.574-.436-1.513-.92,.032-.252,.379-.51,1.042-.773,4.081-1.778,6.803-2.95,8.164-3.517,3.888-1.617,4.696-1.898,5.222-1.907,.116-.002,.375,.027,.543,.163,.142,.115,.181,.27,.199,.379,.019,.109,.042,.357,.023,.551Z" fill-rule="evenodd"></path>
+                        </svg>
+                        <div>
+                            <h4>Telegram</h4>
+                            <span>tuffgit21</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="contact-card">
+                    <a href="https://www.tiktok.com/@i.love_coding" target="_blank" class="contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M24.562,7.613c-1.508-.983-2.597-2.557-2.936-4.391-.073-.396-.114-.804-.114-1.221h-4.814l-.008,19.292c-.081,2.16-1.859,3.894-4.039,3.894-.677,0-1.315-.169-1.877-.465-1.288-.678-2.169-2.028-2.169-3.582,0-2.231,1.815-4.047,4.046-4.047,.417,0,.816,.069,1.194,.187v-4.914c-.391-.053-.788-.087-1.194-.087-4.886,0-8.86,3.975-8.86,8.86,0,2.998,1.498,5.65,3.783,7.254,1.439,1.01,3.19,1.606,5.078,1.606,4.886,0,8.86-3.975,8.86-8.86V11.357c1.888,1.355,4.201,2.154,6.697,2.154v-4.814c-1.345,0-2.597-.4-3.647-1.085Z"></path></svg>
+                        <div>
+                            <h4>TikTok</h4>
+                            <span>@i.love_coding</span>
+                        </div>
+                    </a>
+                </article>
+                <article class="contact-card">
+                    <a href="https://discord.gg/nNTrCmrS6y" target="_blank" class="contact-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+              <path d="M26.413,6.536c-1.971-.902-4.052-1.543-6.189-1.904-.292,.523-.557,1.061-.793,1.612-2.277-.343-4.592-.343-6.869,0-.236-.551-.5-1.089-.793-1.612-2.139,.365-4.221,1.006-6.194,1.909C1.658,12.336,.596,17.987,1.127,23.558h0c2.294,1.695,4.861,2.984,7.591,3.811,.615-.827,1.158-1.704,1.626-2.622-.888-.332-1.744-.741-2.56-1.222,.215-.156,.425-.316,.628-.472,4.806,2.26,10.37,2.26,15.177,0,.205,.168,.415,.328,.628,.472-.817,.483-1.676,.892-2.565,1.225,.467,.918,1.011,1.794,1.626,2.619,2.732-.824,5.301-2.112,7.596-3.808h0c.623-6.461-1.064-12.06-4.46-17.025Zm-15.396,13.596c-1.479,0-2.702-1.343-2.702-2.994s1.18-3.006,2.697-3.006,2.73,1.354,2.704,3.006-1.192,2.994-2.699,2.994Zm9.967,0c-1.482,0-2.699-1.343-2.699-2.994s1.18-3.006,2.699-3.006,2.723,1.354,2.697,3.006-1.189,2.994-2.697,2.994Z"></path>
+            </svg>
+                        <div>
+                            <h4>Discord</h4>
+                            <span>@idk377f</span>
+                        </div>
+                    </a>
+                    
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Youssef - Built with care ⋅ <a href="https://github.com/tuffgit21/">GitHub</a></p>
+    </footer>
+    <script>
+      const btn = document.querySelector('.hamburger');
+      const nav = document.getElementById('main-nav');
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        btn.classList.toggle('open');
+        btn.setAttribute('aria-expanded', nav.classList.contains('open'));
+      });
+      // close menu when link clicked
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }));
+    </script>
 </body>
 </html>
