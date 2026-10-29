@@ -1,7 +1,7 @@
 {
-  "name": "Ledger — Projects",
-  "short_name": "Ledger",
-  "description": "Ledger — a running log of projects built by Youssef, a tech enthusiast working with Python, C, and web technologies.",
+  "name": "Youssef's Projects",
+  "short_name": "Projects",
+  "description": "A project site for tuffgit21",
   "id": "./index.html",
   "start_url": "./index.html",
   "scope": "./",
